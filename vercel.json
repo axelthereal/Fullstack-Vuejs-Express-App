@@ -26,12 +26,7 @@
   ],
   "env": {
     "VERCEL_ENV": "production"
-  },
-  "functions": {
-    "api/*": {
-      "runtime": "vercel-node@16.x"
-    }
-  },
+  }, 
   "rewrites": [
     {
       "source": "/(.*)",
