@@ -33,6 +33,3 @@ app.listen(PORT, (err) => {
     if(err) throw err;
     console.log(`Server running on port ${PORT}`);
 });
-
-
-module.exports = app;
