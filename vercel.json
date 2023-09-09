@@ -23,19 +23,13 @@
       "src": "/(.*)",
       "dest": "frontend/dist/$1"
     }
-  ],
-  "env": {
-    "VERCEL_ENV": "production"
-  }, 
+  ],  
   "rewrites": [
     {
       "source": "/(.*)",
       "destination": "/index.html"
     }
-  ],
-  "edge": {
-    "defaultHandler": "index.html"
-  },
+  ], 
   "build": {
     "env": {
       "CI": "true",
