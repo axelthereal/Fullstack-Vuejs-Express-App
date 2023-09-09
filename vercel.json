@@ -23,18 +23,6 @@
       "src": "/(.*)",
       "dest": "frontend/dist/$1"
     }
-  ],  
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ], 
-  "build": {
-    "env": {
-      "CI": "true",
-      "NODE_ENV": "production"
-    }
-  }
+  ] 
 }
 
