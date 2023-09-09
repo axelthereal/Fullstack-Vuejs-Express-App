@@ -8,7 +8,7 @@ const session = require("express-session");
 const bodyParser = require("body-parser");  
 
 // server_port
-let PORT = process.env.PORT || 3030;
+let PORT = process.env.PORT || 8080;
 //process.env.PORT
 
 // middlewares
@@ -27,3 +27,6 @@ app.listen(PORT, (err) => {
     if(err) throw err;
     console.log(`Server running on port ${PORT}`);
 });
+
+
+module.exports = app;
