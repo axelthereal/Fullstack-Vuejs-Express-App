@@ -1,12 +1,5 @@
 {
-  "builds": [
-    {
-    "src": "frontend/package.json",
-    "use": "@vercel/static-build",
-    "config": {
-      "outputDirectory": "frontend/dist"
-    }
-  },
+  "builds": [ 
     { "src": "/backend/server.js", "use": "@vercel/node" }
   ],
   "routes": [
