@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "name": "xpresschat",
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "outputDirectory": "frontend/dist"
+      }
+    },
+    {
+      "src": "backend/package.json",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "backend/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "frontend/dist/$1"
+    }
+  ],
+  "env": {
+    "VERCEL_ENV": "production"
+  },
+  "functions": {
+    "api/*": {
+      "runtime": "vercel-node@16.x"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "edge": {
+    "defaultHandler": "index.html"
+  },
+  "build": {
+    "env": {
+      "CI": "true",
+      "NODE_ENV": "production"
+    }
+  }
+}
+
