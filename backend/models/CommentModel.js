@@ -1,4 +1,4 @@
-const db = require("../db/connection");
+//const db = require("../db/connection");
 
 class CommentModel{
     constructor (comment){
@@ -33,7 +33,7 @@ class CommentModel{
     }
 
     static all(cb){
-        db.query("SELECT * FROM messages ORDER BY dmsg DESC", (err, row) => {
+        /*db.query("SELECT * FROM messages ORDER BY dmsg DESC", (err, row) => {
            let data = null;
            let errMsg = null;
              if(err){
@@ -50,13 +50,13 @@ class CommentModel{
                 })));
              }
              cb(data, errMsg);
-        });
+        });*/
     }
 
     static create(msg, cb){ 
               let nmsg = msg.toString();
               let date = new Date(); 
-              db.query("INSERT INTO messages SET content = ?, dmsg = ?", [nmsg, date], (err) => {
+              /*db.query("INSERT INTO messages SET content = ?, dmsg = ?", [nmsg, date], (err) => {
                let errMsg = null;
                 if(err) {
                     errMsg = {
@@ -70,7 +70,7 @@ class CommentModel{
                          };
                 }
                 cb(errMsg);
-              }); 
+              }); */
     }
 
 }
