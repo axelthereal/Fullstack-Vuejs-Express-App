@@ -17,6 +17,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // routes 
+app.get("/test", (req, res)=>{
+    res.send({
+        message: "Works in native mode !",
+        status: 200
+    });
+});
 app.use("/", require("./routes/pages"));
 
 // api 
