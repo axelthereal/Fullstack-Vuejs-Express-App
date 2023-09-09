@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "xpresschat",
+  
   "builds": [
     {
       "src": "frontend/package.json",
